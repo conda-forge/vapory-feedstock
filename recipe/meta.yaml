@@ -1,5 +1,5 @@
 {% set name = "vapory" %}
-{% set version = "0.1.01" %}
+{% set version = "0.1.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/V/Vapory/Vapory-{{ version }}.tar.gz
-  sha256: 71ae54b507e8fd2b150c2ed96ede9a1caef74d1d7073a9467dabf49736f5dad0
+  sha256: e0213caaac5cbb1d336ef7455a18e7ffcc8b864093040958ef45bddac8204231
 
 build:
   number: 0
@@ -36,7 +36,7 @@ about:
   license: MIT
   license_family: MIT
   license_file: LICENCE.txt
-  summary: 'Photo-realistic 3D rendering with Python and POV-Ray'
+  summary: Photo-realistic 3D rendering with Python and POV-Ray
 
   description: |
     Vapory is a Python library to render photo-realistic 
