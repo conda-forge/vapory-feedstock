@@ -35,7 +35,7 @@ about:
   home: https://github.com/Zulko/vapory
   license: MIT
   license_family: MIT
-  license_file: LICENCE.txt
+  license_file: LICENSE.txt
   summary: Photo-realistic 3D rendering with Python and POV-Ray
 
   description: |
