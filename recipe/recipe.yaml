@@ -1,0 +1,50 @@
+schema_version: 1
+
+context:
+  name: vapory
+  version: "0.1.2"
+
+package:
+  name: ${{ name|lower }}
+  version: ${{ version }}
+
+source:
+  url: https://pypi.org/packages/source/V/Vapory/Vapory-${{ version }}.tar.gz
+  sha256: e0213caaac5cbb1d336ef7455a18e7ffcc8b864093040958ef45bddac8204231
+
+build:
+  number: 2
+  noarch: python
+  script: ${{ PYTHON }} -m pip install . -vv
+
+requirements:
+  host:
+    - pip
+    - python ${{ python_min }}.*
+    - setuptools
+  run:
+    - python >=${{ python_min }}
+    - numpy
+    - povray
+
+tests:
+  - python:
+      imports:
+        - vapory
+      pip_check: true
+      python_version: ${{ python_min }}
+
+about:
+  license: MIT
+  license_file: LICENSE.txt
+  summary: Photo-realistic 3D rendering with Python and POV-Ray
+  description: |
+    Vapory is a Python library to render photo-realistic
+    3D scenes with the free ray-tracing engine POV-Ray.
+  homepage: https://github.com/Zulko/vapory
+  repository: https://github.com/Zulko/vapory
+  documentation: https://github.com/Zulko/vapory
+
+extra:
+  recipe-maintainers:
+    - jan-janssen
